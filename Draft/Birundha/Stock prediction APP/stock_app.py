@@ -25,7 +25,7 @@ def predict():
     form = request.form
     if request.method == 'POST':
       #Load the trained model. (Pickle file)
-        model = pickle.load(open('model/model.pkl', 'rb'))
+        model = pickle.load(open('model/DJRFmodel.pkl', 'rb'))
 
         year = request.form['year']
         ticker = request.form['ticker'].upper()
@@ -34,7 +34,8 @@ def predict():
     
     stock = yf.Ticker(ticker)
     stocks_df = stock.history()
-    # stocks_df.head()
+    # stocks_df = yf.download("ticker", start='2008-09-01', end=None)##error  Exception('%ticker%: No timezone found, symbol may be delisted')  
+
 
     print(stocks_df.head())
 
