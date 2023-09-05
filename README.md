@@ -25,7 +25,8 @@ Monthly CPI and Unemployment rate
 
 ## Initial Analysis
 
-![AVG CPI and S&P, the correlation is 0.95 that means that as the CPI goes up there is a pretty strong correlation that the S&P will also go up](figure/AverageS&PvsCPI.png)
+![AVG CPI and S&P, the correlation is 0.95 that means that as the CPI goes up there is a pretty strong correlation that the S&P will also go up](figures/AverageS&PvsCPI.png)
+###AVG CPI and S&P, the correlation is 0.95 that means that as the CPI goes up there is a pretty strong correlation that the S&P will also go up
 -Once the data was cleaned, we then did regression lines of the 3 indexes and the macroeconomic factors to see what the highest correlation was 
 -The highest correlation was between the indexes and CPI (S&P  VS CPI at 0.95) 
 -The lowest correlation was Inflation rate and the indexes (S&P was at 0.23) 
