@@ -9,7 +9,8 @@ import streamlit as st
 
 
 #Create an app object using the Flask class. 
-app = Flask("stock predictor")
+# app = Flask("stock predictor")
+app=Flask(__name__,template_folder='templates')
 
 
 @app.route('/')
@@ -25,7 +26,7 @@ def predict():
     form = request.form
     if request.method == 'POST':
       #Load the trained model. (Pickle file)
-        model = pickle.load(open('model/DJRFmodel.pkl', 'rb'))
+        model = pickle.load(open('DJRFmodel.pkl', 'rb'))
 
         year = request.form['year']
         ticker = request.form['ticker'].upper()
@@ -39,7 +40,7 @@ def predict():
 
     print(stocks_df.head())
 
-    test_data = stocks_df[['Open', 'High', 'Low' ]].tail(1)
+    test_data = stocks_df[['Open', 'High', 'Low','Volume' ]].tail(1)
 
     predicted_stock_price = model.predict(test_data)
     return render_template('result.html',   predicted_price=predicted_stock_price)
