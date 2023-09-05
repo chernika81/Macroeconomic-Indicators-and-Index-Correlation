@@ -25,8 +25,7 @@ Monthly CPI and Unemployment rate
 
 ## Initial Analysis
 
-
-![AVG CPI and S&P, the correlation is 0.95 that means that as the CPI goes up there is a pretty strong correlation that the S&P will also go up](AverageS&PvsCPIpng-1.png)
+![AVG CPI and S&P, the correlation is 0.95 that means that as the CPI goes up there is a pretty strong correlation that the S&P will also go up](figure/AverageS&PvsCPI.png)
 -Once the data was cleaned, we then did regression lines of the 3 indexes and the macroeconomic factors to see what the highest correlation was 
 -The highest correlation was between the indexes and CPI (S&P  VS CPI at 0.95) 
 -The lowest correlation was Inflation rate and the indexes (S&P was at 0.23) 
@@ -35,10 +34,18 @@ Monthly CPI and Unemployment rate
 
 ## Tableau Analysis 
 
+# We know that the CPI is the highest correlation, so lets take a look at how that trends over the years
 ![We know that the CPI is the highest correlation, so lets take a look at how that trends over the years](figures/image-1.png)
 
+# it's intersting to see that the indexes all trend the same way
 ![it's intersting to see that the indexes all trend the same way](figures/image-2.png)
+
+# here is a closer look at that 
+
 ![here is a closer look at that ](figures/image-4.png)
+
+# inflation had the lowest correlation, yet you can see here that around 2020, the indexes and inflation seem to have similar movements
+
 ![inflation had the lowest correlation, yet you can see here that around 2020, the indexes and inflation seem to have similar movements](figures/image-5.png)
 ### [Tableau Story 1](https://public.tableau.com/app/profile/maura.ellsworth/viz/finalllproject/Story1?publish=yesory1?publish=yes)
 ### [Tableau Story 2](https://public.tableau.com/app/profile/maura.ellsworth/viz/macroandindexes/Story1?publish=yes)
@@ -51,6 +58,7 @@ The model is 98% accurate in predicting the close
 
 
 ![prediction VS actual](figures/image-6.png)
+
 Expected key U.S. macroeconomic indicators like unemployment, inflation and CPI and FDD were going to be among the highly ranked features.
 While the stock market is influenced by a many factors, the CPI can significantly influence swings in performance. For instance, reactionary Fed moves can directly impact corporate profits and economic growth, leading the stock value to fluctuate drastically. Higher Fed rate hikes based on CPI often cause the market to dip or slow as traders want to hedge their bets.
 
