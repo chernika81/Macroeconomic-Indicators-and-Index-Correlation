@@ -1,4 +1,5 @@
-import numpy as np
+
+
 from flask import Flask, request, render_template
 import pickle
 import pandas as pd
@@ -8,8 +9,10 @@ import streamlit as st
 
 
 
+
+
 #Create an app object using the Flask class. 
-app = Flask("stock predictor")
+app = Flask(__name__)
 
 
 @app.route('/')
