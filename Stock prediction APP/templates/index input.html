@@ -8,13 +8,14 @@
    
     <h3>Enter a Stock Ticker Symbol to See the prediction</h3>
     <form action = "http://127.0.0.1:5000/predict" method = "POST">
-       <!-- <p>Index <input type = "text" name = "Index" /></p> -->
-       <!-- test_data = sp_df[[' Open_S&P', ' High_S&P', ' Low_S&P' ]].tail(5) -->
-       <!-- <form action="sentiment" method="POST" align="center"> -->
-      
+       
         <b>Stock Ticker Symbol: </b> 
         <input id="text_field" name="ticker" type="text" required>     
-        <p>Year <input type = "text" name = "year" /></p>
+        <b>Start and End date: </b>
+        <input type="date" id="Start" name="Start Date">
+        <input type="date" id="End" name="End Date">
+             
+
         <center><input id="submit_button" type="Submit" class="push_button blue"></center>
         
    </form>

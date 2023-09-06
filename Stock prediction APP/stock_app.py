@@ -31,19 +31,17 @@ def predict():
       #Load the trained model. (Pickle file)
         model = pickle.load(open('DJRFmodel.pkl', 'rb'))
 
-        year = request.form['year']
+        Start = request.form['Start Date']
+        End = request.form['End Date']
+
         ticker = request.form['ticker'].upper()
-    print("hello world")
-    period = year *365
-    
     stock = yf.Ticker(ticker)
-    stocks_df = stock.history()
-    # stocks_df = yf.download("ticker", start='2008-09-01', end=None)##error  Exception('%ticker%: No timezone found, symbol may be delisted')  
+    stocks_df = stock.history(start=Start, end=End)
 
 
     print(stocks_df.head())
 
-    test_data = stocks_df[['Open', 'High', 'Low','Volume' ]].tail(1)
+    test_data = stocks_df[['Open', 'High', 'Low','Volume' ]].tail(5)
 
     predicted_stock_price = model.predict(test_data)
     return render_template('result.html',   predicted_price=predicted_stock_price)
